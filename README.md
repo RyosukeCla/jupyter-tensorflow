@@ -1,7 +1,12 @@
 About
 =====
 
-A docker container of Jupyter + tensorflow 
+A docker container
+- datascience-notebook
+- tensorflow
+- tweepy
+- sqlite3
+- mecab for python3
 
 Build
 ========
