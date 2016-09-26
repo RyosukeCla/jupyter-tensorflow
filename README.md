@@ -12,8 +12,22 @@ Build
 ========
 
 ```
-sh ./build.sh
+$ sh ./build.sh
 ```
+check the image
+
+```
+$ docker images
+```
+
+if the image name and tag are <None>,
+try this command
+
+```
+$ docker tag <ImageId> ryosukecla/jupyter-tensorflow:latest
+```
+
+
 
 Usage
 =========
