@@ -52,7 +52,7 @@ RUN pip install sqlalchemy
 
 USER root
 RUN cd && \
-	apt-get install libmecab && \
+	apt-get install libmecab-dev && \
 	apt-get install mecab mecab-ipadic-utf8 && \
 	pip install mecab-python3
 
