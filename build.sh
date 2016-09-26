@@ -2,6 +2,6 @@
 
 TAG=1.3
 
-docker build -t mokemokechicken/jupyter-tensorflow:latest .
-docker tag mokemokechicken/jupyter-tensorflow:latest mokemokechicken/jupyter-tensorflow:${TAG}
+docker build -t ryosukecla/jupyter-tensorflow:latest .
+docker tag ryosukecla/jupyter-tensorflow:latest ryosukecla/jupyter-tensorflow:${TAG}
 
