@@ -20,13 +20,18 @@ check the image
 $ docker images
 ```
 
-if the image name and tag are <None>,
+if the image name and tag are None,
 try this command
 
 ```
-$ docker tag <ImageId> ryosukecla/jupyter-tensorflow:latest
+$ docker tag "ImageId" ryosukecla/jupyter-tensorflow:latest
 ```
 
+and then, run run.sh
+
+```
+sh run.sh
+```
 
 
 Usage
