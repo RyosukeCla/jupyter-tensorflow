@@ -51,10 +51,10 @@ RUN git clone https://github.com/mysql/mysql-connector-python.git && \
 RUN pip install sqlalchemy
 
 USER root
-RUN cd && \
-	apt-get install libmecab-dev && \
-	apt-get install mecab mecab-ipadic-utf8 && \
-	pip install mecab-python3
+RUN cd
+RUN apt-get install libmecab-dev 
+RUN apt-get install mecab mecab-ipadic-utf8 
+RUN pip install mecab-python3
 
-RUN apt-get install -y sqlite3 && \
-	pip install tweepy
+RUN apt-get install -y sqlite3
+RUN pip install tweepy
