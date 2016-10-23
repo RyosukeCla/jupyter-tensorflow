@@ -1,13 +1,5 @@
 From jupyter/datascience-notebook 
 
-RUN curl -k -L -O https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.7.1-cp34-none-linux_x86_64.whl && \
-    mv tensorflow-0.7.1-cp34-none-linux_x86_64.whl tensorflow-0.7.1-cp35-none-linux_x86_64.whl 
-RUN pip install tensorflow-0.7.1-cp35-none-linux_x86_64.whl
-RUN /bin/bash -c "source activate /opt/conda/envs/python2/ && pip install https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.7.1-cp27-none-linux_x86_64.whl"
- 
-RUN pip install skflow
-RUN /bin/bash -c "source activate /opt/conda/envs/python2/ && pip install skflow"
-
 USER root
 RUN apt-get update && apt-get install -y pkg-config
 RUN apt-get install -y graphviz-dev graphviz pkg-config
@@ -51,7 +43,13 @@ RUN git clone https://github.com/mysql/mysql-connector-python.git && \
 RUN pip install sqlalchemy
 
 USER root
+
 RUN cd
+
+RUN apt-get install python-pip python-dev
+RUN export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow-0.11.0rc1-cp35-cp35m-linux_x86_64.whl
+RUN pip3 install --upgrade $TF_BINARY_URL
+
 RUN apt-get install libmecab-dev 
 RUN apt-get install mecab mecab-ipadic-utf8 
 RUN pip install mecab-python3
