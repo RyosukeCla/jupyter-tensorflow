@@ -49,6 +49,7 @@ RUN cd
 RUN apt-get install python-pip python-dev
 RUN export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow-0.11.0rc1-cp35-cp35m-linux_x86_64.whl
 RUN pip3 install --upgrade $TF_BINARY_URL
+RUN pip install git+https://github.com/tflearn/tflearn.git
 
 RUN apt-get install libmecab-dev 
 RUN apt-get install mecab mecab-ipadic-utf8 
